@@ -1,12 +1,6 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - backpropagator
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - backpropagator/Boundary-Preserving-Twin-EBMs
+  - backpropagator/Citation-Significance

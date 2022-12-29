@@ -2,24 +2,41 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: #<a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Room No. SP-1.13,</p>
+    <p>ECE Department,</p>
+    <p>Indian Institute of Science,</p>
+    <p>Bengaluru, 560012</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi! I am a Research Scholar at Indian Institute of Science (IISc) Bangalore, working under the guidance of [Dr. Prathosh A.P.](https://sites.google.com/view/prathosh/home?authuser=0). \\
+\\
+ I completed my B.Tech in Electrical Engineering from Indian Institute of Technology Patna (IIT Patna). Nowadays, I am focussing on different ways to use Energy Based Models (EBMs) in unsupervised settings.  Specifically, a typical EBM is trained using [contrastive divergence loss](https://www.robots.ox.ac.uk/~ojw/files/NotesOnCD.pdf) which requires samples from the target distribution which requires some sort of supervision. I wonder if there is some way to circumvent this. \\
+ \\
+In an earlier life, I worked on solving the problem of localization in indoor environment using deep learning methods. I was blessed to have [Dr. Sudhir Kumar](https://sites.google.com/site/ksudhiriitk/) (Assistant Professor, IIT Patna) as guide during my B.Tech. I worked for about 3.5 years under him. In the course of my bachelors, I also had opportunity to collaborate with [Dr. Sajal K. Das](https://sites.google.com/a/mst.edu/sdas/home) and [Dr. Moustafa Youssef](https://scholar.google.com/citations?user=r6DUyxsAAAAJ&hl=en). \\
+\\
+If you are interested in discussing about theoretical interpretation of deep learning models in general, please ping me I am always excited to have these sorts of discussion.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<u>Favourite Quote</u>: "कौन कहता है कि आसमां में सुराख हो नहीं सकता, एक पत्थर तो तबीयत से उछालो यारों!" ~Dushyant Kumar \\
+(Translation: Who says you can't make a hole in the sky, my dear friend atleast throw a stone by heart!)
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="social">
+<div class="contact-icons">
+
+</div>
