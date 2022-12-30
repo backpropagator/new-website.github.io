@@ -10,6 +10,7 @@
   --global-footer-text-color: #{$black-color};
   --global-footer-link-color: #{$black-color};
   --global-icon-color: #{$grey-color-dark};
+  --global-card-bg-color: #{$white-color};
 
   .fa-sun {
     display : none;
@@ -30,6 +31,7 @@ html[data-theme='dark'] {
   --global-footer-text-color: #{$grey-color};
   --global-footer-link-color: #{$grey-color};
   --global-icon-color: #bebebe;
+  --global-card-bg-color: #{$grey-900};
 
   .fa-sun {
     padding-left: 10px;
