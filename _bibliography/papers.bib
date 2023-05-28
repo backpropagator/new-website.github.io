@@ -13,7 +13,8 @@
   url={https://openreview.net/forum?id=sCYXJr3QJM8},
   html={https://openreview.net/forum?id=sCYXJr3QJM8},
   abstract={In this work, our objective is to adapt a Deep generative model trained on a large-scale source dataset to multiple target domains with scarce data. Specifically, we focus on adapting a pre-trained Generative Adversarial Network (GAN) to a target domain without re-training the generator. Our method draws the motivation from the fact that out-of-distribution samples can be `embedded' onto the latent space of a pre-trained source-GAN. We propose to train a small latent-generation network during the inference stage, each time a  batch of target samples is to be generated. These target latent codes are fed to the source-generator to obtain  novel target samples. Despite using the same small set of target samples and the source generator, multiple independent training episodes of the latent-generation network results in the diversity of the generated target samples. Our method, albeit simple, can be used to generate data from multiple target distributions using a generator trained on a single source distribution. We demonstrate the efficacy of our surprisingly simple method in generating multiple target datasets with only a single source generator and a few target samples.},
-  selected={true}
+  selected={true},
+  preview={genda-iclr.png}
 }
 
 
@@ -24,8 +25,10 @@
   author={Mondal, Arnab Kumar and Singhal, Lakshya and Tiwary, Piyush and Singla, Parag and Prathosh, AP},
   booktitle={International Conference on Artificial Intelligence and Statistics},
   year={2023},
+  url={https://proceedings.mlr.press/v206/mondal23a.html},
   abstract={Class imbalance is a common phenomenon in multiple application domains such as healthcare, where the sample occurrence of one or few class categories is more prevalent in the dataset than the rest. This work addresses the class-imbalance issue by proposing an over-sampling method for the minority classes in the latent space of a Regularized Auto-Encoder (RAE). Specifically, we construct a latent space by maximizing the conditional data likelihood using an Encoder-Decoder structure, such that oversampling through convex combinations of latent samples preserves the class identity. A jointly-trained linear classifier that separates convexly coupled latent vectors from different classes is used to impose this property on the AE's latent space. Further, the aforesaid linear classifier is used for final classification without retraining. We theoretically show that our method can achieve a low variance risk estimate compared to naive oversampling methods and is robust to overfitting. We conduct several experiments on benchmark datasets and show that our method outperforms the existing oversampling techniques for handling class imbalance.},
-  selected={true}
+  selected={true},
+  preview={osrae-aistats.jpg}
 }
 
 
@@ -48,12 +51,13 @@ network during inference generates a novel target embedding that is supplied to
 the source-GAN generator to generate target samples. Our method, albeit simple,
 can be used to generate data from multiple target distributions using a generator
 trained on a single source distribution.},
+preview={genda-iclr.png}
 }
 
 @article{9797867,
   abbr={IEEE TSP},
   bibtex_show={true},
-  author={Pandey, Ankur and Tiwary, Piyush and Kumar, Sudhir and Das, Sajal K.},
+  author={Pandey, Ankur and Tiwary*, Piyush and Kumar, Sudhir and Das, Sajal K.},
   journal={IEEE Transactions on Signal Processing}, 
   title={FadeLoc: Smart Device Localization for Generalized ${\kappa {-} \mu}$ Faded IoT Environment}, 
   year={2022},
@@ -71,7 +75,7 @@ trained on a single source distribution.},
 @article{10.1162/qss_a_00170,
     abbr={MIT QSS},
     bibtex_show={true},
-    author = {Ghosal, Tirthankar and Tiwary, Piyush and Patton, Robert and Stahl, Christopher},
+    author = {Ghosal, Tirthankar and Tiwary*, Piyush and Patton, Robert and Stahl, Christopher},
     title = "{Towards establishing a research lineage via identification of significant citations}",
     journal = {Quantitative Science Studies},
     volume = {2},
