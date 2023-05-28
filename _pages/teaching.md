@@ -10,25 +10,48 @@ nav_order: 5
 <body>
   <!-- Content -->
   <div class="content">
-<h5>Indian Institute of Science   </h5>
-<div class="card mt-3 #FFFFF">
-  <div class="p-3">
-    <div class="row">
-      <div class="col-sm-10">
-        <h5 class="font-weight-bold">Advanced Deep Representation Learning</h5>
+      <h5>National Programme on Technology Enhanced Learning (NPTEL)   </h5>
+  <div class="card mt-3 #FFFFF">
+    <div class="p-3">
+      <div class="row">
+        <div class="col-sm-10">
+          <h5 class="font-weight-bold">Deep Learning</h5>
+        </div>
+        <div class="col-sm-2 text-left text-sm-right">
+        <a href="https://catalog.clemson.edu/preview_course_nopop.php?catoid=16&coid=65280" class="badge font-weight-bold purple darken-4 text-uppercase align-middle">
+              NOC23-CS24
+          </a>
+        </div>
       </div>
-      <div class="col-sm-2 text-left text-sm-right">
-       <a href="https://catalog.clemson.edu/preview_course_nopop.php?catoid=16&coid=65280" class="badge font-weight-bold purple darken-4 text-uppercase align-middle">
-            E9 333
-        </a>
-      </div>
+      <h6 class="font-italic mt-2 mt-sm-0">Spring 2023: Teaching Assistant</h6>
+      <ul class="card-text font-weight-light list-group list-group-flush">
+        <li class="list-group-item">Deep Learning has received a lot of attention over the past few years and has been employed successfully by companies like Google, Microsoft, IBM, Facebook, Twitter etc. to solve a wide range of problems in Computer Vision and Natural Language Processing. In this course we will learn about the building blocks used in these Deep Learning based solutions. Specifically, we will learn about feedforward neural networks, convolutional neural networks, recurrent neural networks and attention mechanisms. We will also look at various optimization algorithms such as Gradient Descent, Nesterov Accelerated Gradient Descent, Adam, AdaGrad and RMSProp which are used for training such deep neural networks. At the end of this course students would have knowledge of deep architectures used for solving various Vision and NLP tasks.</li>
+        <li class="list-group-item"> <a href="https://onlinecourses.nptel.ac.in/noc23_cs24/course" target="_blank"><b>Course Website</b></a>.</li>
+        <li class="list-group-item"> <a href="https://youtube.com/playlist?list=PLlZRoE1e4FG4MxzRE4Y7xi2JaqrfM8G7w" target="_blank"><b>Problem Solving Sessions</b></a>.</li>
+      </ul>
     </div>
-    <h6 class="font-italic mt-2 mt-sm-0">Fall 2022: Teaching Assistant</h6>
-    <ul class="card-text font-weight-light list-group list-group-flush">
-      <li class="list-group-item">This course contains discussions on cutting-edge topics on Advanced Deep learning. Given their practical applicability, it is imperative that the algorithms discussed during the lectures are duly implemented  (as assignments) by the students.</li>
-      <li class="list-group-item"> <a href="https://sites.google.com/view/prathosh/courses-august-2022/advanced-deep-rep-learning?authuser=0" target="_blank"><b>Course syllabus</b></a>.</li>
-    </ul>
-  </div>
+    </div>
+<hr>
+  <div class="content">
+    <h5>Indian Institute of Science   </h5>
+    <div class="card mt-3 #FFFFF">
+      <div class="p-3">
+        <div class="row">
+          <div class="col-sm-10">
+            <h5 class="font-weight-bold">Advanced Deep Representation Learning</h5>
+          </div>
+          <div class="col-sm-2 text-left text-sm-right">
+          <a href="https://catalog.clemson.edu/preview_course_nopop.php?catoid=16&coid=65280" class="badge font-weight-bold purple darken-4 text-uppercase align-middle">
+                E9 333
+            </a>
+          </div>
+        </div>
+        <h6 class="font-italic mt-2 mt-sm-0">Fall 2022: Teaching Assistant</h6>
+        <ul class="card-text font-weight-light list-group list-group-flush">
+          <li class="list-group-item">This course contains discussions on cutting-edge topics on Advanced Deep learning. Given their practical applicability, it is imperative that the algorithms discussed during the lectures are duly implemented  (as assignments) by the students.</li>
+          <li class="list-group-item"> <a href="https://sites.google.com/view/prathosh/courses-august-2022/advanced-deep-rep-learning?authuser=0" target="_blank"><b>Course syllabus</b></a>.</li>
+        </ul>
+      </div>
 </div>
   <!-- <hr>
 <div class="content">
