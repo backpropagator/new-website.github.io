@@ -20,6 +20,12 @@
     padding-top: 12px;
     display : block;
   }
+  .repo-img-light {
+    display: block;
+  }
+  .repo-img-dark {
+    display: none;
+  }
 }
 
 html[data-theme='dark'] {
