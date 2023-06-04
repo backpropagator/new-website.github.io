@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Room No. SP-1.13,</p>
+    <p>Room: SP-1.13,</p>
     <p>ECE Department,</p>
     <p>Indian Institute of Science,</p>
     <p>Bengaluru, 560012</p>
@@ -23,7 +23,7 @@ Hi! I am a Research Scholar at Indian Institute of Science (IISc) Bangalore, wor
 \\
  I completed my B.Tech in Electrical Engineering from Indian Institute of Technology Patna (IIT Patna). Nowadays, I am focussing on different ways to use Energy Based Models (EBMs) in unsupervised settings.  Specifically, a typical EBM is trained using [contrastive divergence loss](https://www.robots.ox.ac.uk/~ojw/files/NotesOnCD.pdf) which requires samples from the target distribution which requires some sort of supervision. I wonder if there is some way to circumvent this. \\
  \\
-In an earlier life, I worked on solving the problem of localization in indoor environment using deep learning methods. I was blessed to have [Dr. Sudhir Kumar](https://sites.google.com/site/ksudhiriitk/) (Assistant Professor, IIT Patna) as guide during my B.Tech. I worked for about 3.5 years under him. In the course of my bachelors, I also had opportunity to collaborate with [Dr. Sajal K. Das](https://sites.google.com/a/mst.edu/sdas/home) and [Dr. Moustafa Youssef](https://scholar.google.com/citations?user=r6DUyxsAAAAJ&hl=en). \\
+In an earlier life, I worked on solving the problem of localization in indoor environment using deep learning methods. I was blessed to have [Dr. Sudhir Kumar](https://sites.google.com/site/ksudhiriitk/) (IIT Patna) as guide during my B.Tech. I worked for about 3.5 years under him. In the course of my bachelors, I also had opportunity to collaborate with [Dr. Sajal K. Das](https://sites.google.com/a/mst.edu/sdas/home) and [Dr. Moustafa Youssef](https://scholar.google.com/citations?user=r6DUyxsAAAAJ&hl=en). \\
 \\
 If you are interested in discussing about theoretical interpretation of deep learning models in general, please ping me I am always excited to have these sorts of discussion.
 
