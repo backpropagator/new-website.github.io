@@ -24,10 +24,10 @@ nav_order: 5
         </div>
       </div>
       <h6 class="font-italic mt-2 mt-sm-0">Spring 2024: Teaching Assistant</h6>
-      <ul class="card-text font-weight-light list-group list-group-flush">
-        <li class="list-group-item">The use of statistical reasoning and methodology is indispensable in modern world. It is applicable to every discipline, be it physical sciences, engineering and technology, economics or social sciences. Much of the advanced research in electronics, electrical, computer science, industrial engineering, biology, genetics, and information science relies increasingly on use of statistical tools. It is essential for the students to get acquainted with the subject of probability and statistics at an early stage. The present course has been designed to introduce the subject to undergraduate/postgraduate students in science and engineering. The course contains a good introduction to each topic and an advance treatment of theory at a fairly understandable level to the students at this stage. Each concept has been explained through examples and application oriented problems.</li>
-        <li class="list-group-item"> <a href="https://onlinecourses.nptel.ac.in/noc24_ma39/preview" target="_blank"><b>Course Website</b></a>.</li>
-        <li class="list-group-item"> <a href="https://www.youtube.com/playlist?list=PLlZRoE1e4FG5t8c_bG4DJh7o2AOk8wgJF" target="_blank"><b>Problem Solving Sessions</b></a>.</li>
+      <ul class="card-text font-weight-light list-group list-group-flush" style="list-style-type:none;">
+        <li>Statistical reasoning is vital across disciplines like sciences and engineering, supporting advanced research in fields like electronics, biology, and information science. Early exposure to probability and statistics is crucial for students in these fields. This course introduces undergraduates and postgraduates to the subject, offering a comprehensive yet accessible treatment of theory, with concepts illustrated through examples and practical problems.</li>
+        <li> <a href="https://onlinecourses.nptel.ac.in/noc24_ma39/preview" target="_blank"><b>Course Website</b></a>.</li>
+        <li> <a href="https://www.youtube.com/playlist?list=PLlZRoE1e4FG5t8c_bG4DJh7o2AOk8wgJF" target="_blank"><b>Problem Solving Sessions</b></a>.</li>
       </ul>
     </div>
     </div>
@@ -46,7 +46,7 @@ nav_order: 5
       </div>
       <h6 class="font-italic mt-2 mt-sm-0">Spring 2023: Teaching Assistant</h6>
       <ul class="card-text font-weight-light list-group list-group-flush">
-        <li class="list-group-item">Deep Learning has received a lot of attention over the past few years and has been employed successfully by companies like Google, Microsoft, IBM, Facebook, Twitter etc. to solve a wide range of problems in Computer Vision and Natural Language Processing. In this course we will learn about the building blocks used in these Deep Learning based solutions. Specifically, we will learn about feedforward neural networks, convolutional neural networks, recurrent neural networks and attention mechanisms. We will also look at various optimization algorithms such as Gradient Descent, Nesterov Accelerated Gradient Descent, Adam, AdaGrad and RMSProp which are used for training such deep neural networks. At the end of this course students would have knowledge of deep architectures used for solving various Vision and NLP tasks.</li>
+        <li class="list-group-item">Deep Learning has garnered significant attention recently, utilized successfully by tech giants like Google, Microsoft, and Facebook for solving various Computer Vision and Natural Language Processing problems. This course covers key Deep Learning concepts, including feedforward neural networks, convolutional neural networks, recurrent neural networks, and attention mechanisms. It also explores optimization algorithms such as Gradient Descent, Nesterov Accelerated Gradient Descent, Adam, AdaGrad, and RMSProp commonly used in training deep neural networks. By course completion, students will gain knowledge of deep architectures for addressing Vision and NLP tasks.</li>
         <li class="list-group-item"> <a href="https://onlinecourses.nptel.ac.in/noc23_cs24/course" target="_blank"><b>Course Website</b></a>.</li>
         <li class="list-group-item"> <a href="https://youtube.com/playlist?list=PLlZRoE1e4FG4MxzRE4Y7xi2JaqrfM8G7w" target="_blank"><b>Problem Solving Sessions</b></a>.</li>
       </ul>
