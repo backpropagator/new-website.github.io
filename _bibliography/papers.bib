@@ -3,11 +3,26 @@
 
 @string{aps = {American Physical Society,}}
 
+
+@inproceedings{tiwary2024bayesian,
+  abbr={UAI},
+  bibtex_show={true},
+  title={Bayesian Pseudo-Coresets via Contrastive Divergence},
+  author={Tiwary, Piyush and Shubham, Kumar and Kashyap, Vivek and Prathosh, AP},
+  booktitle={Uncertainity in Artificial Intelligence (UAI)},
+  year={2024},
+  url={https://arxiv.org/abs/2303.11278},
+  html={https://arxiv.org/abs/2303.11278},
+  abstract={Bayesian methods provide an elegant framework for estimating parameter posteriors and quantification of uncertainty associated with probabilistic models. However, they often suffer from slow inference times. To address this challenge, Bayesian Pseudo-Coresets (BPC) have emerged as a promising solution. BPC methods aim to create a small synthetic dataset, known as pseudo-coresets, that approximates the posterior inference achieved with the original dataset. This approximation is achieved by optimizing a divergence measure between the true posterior and the pseudo-coreset posterior. Various divergence measures have been proposed for constructing pseudo-coresets, with forward Kullback-Leibler (KL) divergence being the most successful. However, using forward KL divergence necessitates sampling from the pseudo-coreset posterior, often accomplished through approximate Gaussian variational distributions. Alternatively, one could employ Markov Chain Monte Carlo (MCMC) methods for sampling, but this becomes challenging in high-dimensional parameter spaces due to slow mixing. In this study, we introduce a novel approach for constructing pseudo-coresets by utilizing contrastive divergence. Importantly, optimizing contrastive divergence eliminates the need for approximations in the pseudo-coreset construction process. Furthermore, it enables the use of finite-step MCMC methods, alleviating the requirement for extensive mixing to reach a stationary distribution. To validate our method's effectiveness, we conduct extensive experiments on multiple datasets, demonstrating its superiority over existing BPC techniques.},
+  selected={false},
+  preview={bpc-uai.png}
+}
+
 @article{10356779,
   abbr={IEEE TNSE},
   bibtex_show={true},
   author={Pandey, Ankur and Tiwary, Piyush and Kumar, Sudhir},
-  journal={IEEE Transactions on Network Sciences and Engineering,}, 
+  journal={IEEE Transactions on Network Sciences and Engineering}, 
   title={Bessel Function Mixture Model for Localization in Generalized ${\eta {-} \mu}$ IoT Fading Environment}, 
   year={2023},
   abstract={The effectiveness of localization techniques that rely on Received Signal Strength (RSS) is impeded by the existence of small-scale fading and non-line-of-sight (NLOS) phenomena. Therefore, it is crucial to accurately model the fading distribution when estimating the location of smart devices. The utilisation of a generic fading model confers a significant advantage owing to its capacity to accommodate a variety of fading distributions across diverse environments. This work introduces a new approach for device localization in a connected Internet of Things (IoT) setting, utilising a generic η-μ fading model for RSS. We propose a Bessel Function mixture model that is utilised to estimate the position of the device, taking into account a generic η-μ fading model. A log-Sigmoid weight function is employed to combine large and small approximations for the modified Bessel function of the first kind. The position coordinates are estimated through a gradient ascent that seeks to optimise the derived maximum likelihood (ML) function. The method under consideration is evaluated in three distinct settings, namely an authentic indoor environment, a simulated η-μ fading environment, and an outdoor testbed. Our findings demonstrate the effectiveness of the generic fading models, surpassing current state-of-the-art methodologies.},
@@ -21,7 +36,7 @@
   abbr={MedIA},
   bibtex_show={true},
   author={Tiwary, Piyush and Bhattacharyya, Kinjawl and Prathosh, AP},
-  journal={Medical Image Analysis}, 
+  journal={Medical Image Analysis (MedIA)}, 
   title={Cycle Consistent Twin Energy-based Models for Image-to-Image Translation}, 
   year={2023},
   volume={91},
@@ -38,7 +53,7 @@
   bibtex_show={true},
   title={Few Shot Generative Domain Adaptation Via Inference-Stage Latent Learning in GANs},
   author={Mondal, Arnab Kumar and Tiwary, Piyush and Singla, Parag and Prathosh, AP},
-  booktitle={International Conference on Learning Representation},
+  booktitle={International Conference on Learning Representation (ICLR)},
   year={2023},
   url={https://openreview.net/forum?id=sCYXJr3QJM8},
   html={https://openreview.net/forum?id=sCYXJr3QJM8},
@@ -53,7 +68,7 @@
   bibtex_show={true},
   title={Minority Oversampling for Imbalanced Data via Class-Preserving Regularized Auto-Encoders},
   author={Mondal, Arnab Kumar and Singhal, Lakshya and Tiwary, Piyush and Singla, Parag and Prathosh, AP},
-  booktitle={International Conference on Artificial Intelligence and Statistics},
+  booktitle={International Conference on Artificial Intelligence and Statistics (AISTATS)},
   year={2023},
   url={https://proceedings.mlr.press/v206/mondal23a.html},
   html={https://proceedings.mlr.press/v206/mondal23a.html},
