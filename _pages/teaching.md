@@ -26,7 +26,9 @@ nav_order: 5
       <h6 class="font-italic mt-2 mt-sm-0">Spring 2024: Teaching Assistant</h6>
       <ul class="card-text font-weight-light list-group list-group-flush" style="list-style-type:none;">
         <li>Statistical reasoning is vital across disciplines like sciences and engineering, supporting advanced research in fields like electronics, biology, and information science. Early exposure to probability and statistics is crucial for students in these fields. This course introduces undergraduates and postgraduates to the subject, offering a comprehensive yet accessible treatment of theory, with concepts illustrated through examples and practical problems.</li>
+        <hr/>
         <li> <a href="https://onlinecourses.nptel.ac.in/noc24_ma39/preview" target="_blank"><b>Course Website</b></a>.</li>
+        <hr/>
         <li> <a href="https://www.youtube.com/playlist?list=PLlZRoE1e4FG5t8c_bG4DJh7o2AOk8wgJF" target="_blank"><b>Problem Solving Sessions</b></a>.</li>
       </ul>
     </div>
