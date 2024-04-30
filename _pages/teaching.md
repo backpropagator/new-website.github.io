@@ -75,7 +75,7 @@ nav_order: 5
         <ul class="card-text font-weight-light list-group list-group-flush" style="list-style-type:none;">
           <li>This course contains discussions on cutting-edge topics on Advanced Deep learning. Given their practical applicability, it is imperative that the algorithms discussed during the lectures are duly implemented  (as assignments) by the students.</li>
           <hr/>
-          <li> <a href="https://sites.google.com/view/prathosh/courses-august-2022/advanced-deep-rep-learning?authuser=0" target="_blank"><b>Course syllabus</b></a>.</li>
+          <li> <a href="https://sites.google.com/view/prathosh/courses-august-2022/advanced-deep-rep-learning?authuser=0" target="_blank"><b>Course Syllabus</b></a>.</li>
         </ul>
       </div>
 </div>
