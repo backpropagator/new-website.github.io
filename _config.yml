@@ -101,7 +101,7 @@ contact_note: >
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
 
-google_analytics:  # your Goole Analytics measurement ID (format: G-XXXXXXXXXX)
+google_analytics: G-DP8LD8Z4LH # your Goole Analytics measurement ID (format: G-XXXXXXXXXX)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
 google_site_verification:  # your google-site-verification ID (Google Search Console)
@@ -208,7 +208,6 @@ plugins:
   - jekyll-link-attributes
   - jekyll-twitter-plugin
   - jemoji
-  - jekyll-analytics
 
 # Sitemap settings
 defaults:
@@ -321,36 +320,13 @@ jekyll-diagrams:
     # feel free to comment out this section if not using jekyll diagrams.
 
 
-# -----------------------------------------------------------------------------
-# Jekyll Analytics
-# -----------------------------------------------------------------------------
-
-jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: G-DP8LD8Z4LH          # Required - replace with your tracking id
-    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
-
-  Matomo:                   # Add, if you want to track with Matomo (former Piwik Analytics)
-    url: matomo.example.com # Required - url to Matomo installation without trailing /
-    siteId: "1234"          # Required - replace with your Matomo site id (Write id as string)
-
-  Piwik:                    # Add, if you want to track with Piwik
-    url: piwik.example.com  # Required - url to Piwik installation without trailing /
-    siteId: "1234"          # Required - replace with your Piwik site id (Write id as string)
-
-  MPulse:                   # Add if you want to track performance with mPulse
-    apikey: XXXXX-YYYYY-ZZZZZ-AAAAA-23456   # Required - replace with your mPulse API key
-
-  Plausible:
-    domain: 'example.com'   # The domain configured in plausible
-    source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
 
 
 # -----------------------------------------------------------------------------
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics:    false  # enables google analytics
+enable_google_analytics:    true  # enables google analytics
 enable_panelbear_analytics: false  # enables panelbear analytics
 enable_google_verification: false  # enables google site verification
 enable_bing_verification:   false  # enables bing site verification
