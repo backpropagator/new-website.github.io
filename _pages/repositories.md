@@ -3,7 +3,7 @@ layout: page
 permalink: /repositories/
 title: repositories
 description: Github repos pertaining to various research projects. 
-nav: true
+nav: false
 nav_order: 3
 ---
 
