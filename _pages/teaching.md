@@ -10,6 +10,29 @@ nav_order: 5
 <body>
   <!-- Content -->
   <div class="content">
+      <h5> Institute of Smart Structures and Systems (ISSS)   </h5>
+  <div class="card mt-3 #FFFFF">
+    <div class="p-3">
+      <div class="row">
+        <div class="col-sm-10">
+          <h5 class="font-weight-bold">Generative Learning: From VAEs to Diffusion Models</h5>
+        </div>
+        <!-- <div class="col-sm-2 text-left text-sm-right">
+        <a href="https://catalog.clemson.edu/preview_course_nopop.php?catoid=16&coid=65280" class="badge font-weight-bold purple darken-4 text-uppercase align-middle">
+              NOC24-MA39
+          </a>
+        </div> -->
+      </div>
+      <h6 class="font-italic mt-2 mt-sm-0">Spring 2025: Instructor</h6>
+      <ul class="card-text font-weight-light list-group list-group-flush" style="list-style-type:none;">
+        <li>An introductory course to learn the fundamentals of generative modelling. The course will start from basics of EM algorithm, and will go all the way till Diffusion Models. The underlying idea is to connect seemingly disconnected topics like VAEs and Diffusion Models through a unified theory.</li>
+        <hr/>
+        <li> <a href="https://www.youtube.com/playlist?list=PLlZRoE1e4FG7Ax89tyiPpBRByN6QR-TZV" target="_blank"><b>Lectures</b></a>.</li>
+      </ul>
+    </div>
+    </div>
+<hr>
+  <div class="content">
       <h5> National Programme on Technology Enhanced Learning (NPTEL)   </h5>
   <div class="card mt-3 #FFFFF">
     <div class="p-3">
@@ -71,7 +94,7 @@ nav_order: 5
             </a>
           </div>
         </div>
-        <h6 class="font-italic mt-2 mt-sm-0">Fall 2022: Teaching Assistant</h6>
+        <h6 class="font-italic mt-2 mt-sm-0">Fall 2022, 2023, 2024: Teaching Assistant</h6>
         <ul class="card-text font-weight-light list-group list-group-flush" style="list-style-type:none;">
           <li>This course contains discussions on cutting-edge topics on Advanced Deep learning. Given their practical applicability, it is imperative that the algorithms discussed during the lectures are duly implemented  (as assignments) by the students.</li>
           <hr/>

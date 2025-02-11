@@ -33,11 +33,18 @@
 - title: Work Experience
   type: time_table
   contents:
+    - title: Research Intern
+      institution: Adobe Research
+      year: Summer 2024
+      description:
+        - <u>Work:</u> Image Recolorization using Diffusion Priors.
+
     - title: SDE Intern
       institution: CapitalVia Global Research Limited - Investment Advisor
       year: Summer 2020
       description:
         - <u>Work:</u> Developing deployable parameter optimization framework for trading strategies using back-testing results on previous data.
+
     - title: Research Intern
       institution: International Institute of Information Technology Bangalore, India
       year: Summer 2019
@@ -74,7 +81,7 @@
 - title: Services
   type: list
   contents:
-    - <u>Reviewer:</u> CVPR 2022, NeurIPS (2024, 2023), AISTATS 2024, Complex & Intelligent Systems, IEEE Transactions on Dependable and Secure Computing
+    - <u>Reviewer:</u> CVPR (2025, 2024, 2022), NeurIPS (2025, 2024, 2023), ICML (2025, 2024), AISTATS 2024, Complex & Intelligent Systems, IEEE Transactions on Dependable and Secure Computing
     - <u>Volunteer:</u> IEEE SPCOM 2022, NeurIPS 2021
 
 - title: Achievements
