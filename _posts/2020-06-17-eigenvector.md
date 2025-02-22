@@ -1,174 +1,119 @@
 ---
 layout: post
-title: 'Pondering upon Eigenvectors'
+title: 'Pondering Upon Eigenvectors'
 date: 2020-06-17 11:12:00-0400
 description: basics of eigenvectors/eigenvalues
 tags: math, basics
 categories: math
 ---
-The Eigenvectors & Eigenvalues pop up in many places of mathematical analysis and application. For example: Machine Learning, Control Theory, Signal Processing, Quantum Physics, Markov Process just to name a few! Despite it's wide applications, it isn't entirely clear as to what do these Eigenvectors represent and what is their significance in all these applications. Also, many students see Eigenvectors as a bunch of steps to find a vector which is going to help them, and hence they have very little intuition about them. In this post, I plan to give an intuition of the same and also provide some insights of how it is calculated algorithmically.
 
-## Matrix as Transformations!
+Eigenvectors and eigenvalues are like the VIPs of mathematics—showing up everywhere from machine learning to quantum physics, control theory to signal processing, even sneaking into Markov processes. They’re powerful, they’re essential, but let’s be real: their geometric meaning often feels like a mystery wrapped in an enigma for most learners. So, buckle up! This post is here to unravel eigenvectors and eigenvalues with some intuitive flair and a peek into how they’re computed, while addressing a few tricky spots that might trip you up.
 
-Well to understand this, we need to understand what a **"Matrix"** is? Generally, matrices are seen as a bunch of numbers inside a box used to perform collective operations. It's one way to look at it. But a higher level insight is to look at matrices as a **Transformation**!
+## Matrices as Transformations? Oh Yes!
 
-Let's take an example, let $$A = \left( \begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array} \right) $$.
-If we multiply any vector
-$$ \alpha = \left( \begin{array}{c} \alpha_1 \\ \alpha_2 \\ \end{array} \right) $$ with $$A$$, we'll get the same vector. Not interesting right?
+To get to eigenvectors, we start with matrices. You might see a matrix as just a grid of numbers waiting to be crunched. Fair enough. But here’s a mind-blowing twist: **matrices define linear transformations**—they take vectors and morph them into something new!
 
-But here is where it gets interesting, we can look at this multiplication in 2 ways. One way is
-
-$$A\alpha = \begin{pmatrix} 1 & 0 \end{pmatrix} \begin{pmatrix} \alpha_1 \\\ \alpha_2 \end{pmatrix} + 
-\begin{pmatrix} 0 & 1 \end{pmatrix} \begin{pmatrix} \alpha_1 \\\ \alpha_2 \end{pmatrix}$$
-
-or,
+Take the simplest example, the identity matrix:
 
 $$
-A\alpha = \left( \begin{array}{cc} (1*\alpha_1) + (0*\alpha_2) \\ (0*\alpha_1) + (1*\alpha_2) \\ \end{array} \right)
+A = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
 $$
 
-which is the traditional way to multiply 2 matrices. But there's another way to look at it, instead of multiplying rows of by columns, we can multiply columns by rows, here's what I mean -
+Multiply this by any vector $$ \alpha = \left( \begin{array}{c} \alpha_1 \\ \alpha_2 \\ \end{array} \right) $$, and—surprise!—you get \(\alpha\) right back. Boring? Maybe. But stick with me, because this is where the fun begins.
+
+Let’s break down that multiplication. The usual way is:
 
 $$
-A\alpha = \left( \begin{array}{c} 1 \\ 0 \\ \end{array} \right)\alpha_1 + \left( \begin{array}{c} 0 \\ 1 \\ \end{array} \right)\alpha_2
+A\alpha = \begin{pmatrix} 1 & 0 \end{pmatrix} \begin{pmatrix} \alpha_1 \\ \alpha_2 \end{pmatrix} + \begin{pmatrix} 0 & 1 \end{pmatrix} \begin{pmatrix} \alpha_1 \\ \alpha_2 \end{pmatrix} = \begin{pmatrix} 1 \cdot \alpha_1 + 0 \cdot \alpha_2 \\ 0 \cdot \alpha_1 + 1 \cdot \alpha_2 \end{pmatrix}
 $$
 
-from this way of multiplication, we can see that this multiplication is essentially addition of two seperate column vectors, where each column vector is obtained by taking the columns of $$A$$ and **scaling** them by elements of $$\alpha$$! In other words, if we want to find the product of a matrix with a vector, just take the columns of the matrix, scale them by corresponding amount in the vector and sum them up. So, we scale the first column by $$\alpha_1$$ and second column by $$\alpha_2$$ and add them up.
-
-Does this seem familiar? If you were thinking of Vectors, you are right! This is indeed the essence of a Matrix that **the columns of a Matrix represent the vectors which span the range of the Matrix**, these vectors are also called **Basis Vectors**.
-
-Going back to our example, the columns of $$A$$ :
-$$
-\left( \begin{array}{c} 1 \\ 0 \\ \end{array} \right)
-$$ 
-&
-$$ 
-\left( \begin{array}{c} 0 \\ 1 \\ \end{array} \right)
-$$
-in a way, represent the directions in which we need to travel to get our answer (the product), so you need to go $$\alpha_1$$ amount in the direction of
-$$
-\left( \begin{array}{c} 1 \\ 0 \\ \end{array} \right)
-$$ 
-and $$\alpha_2$$ amount in the direction of
-$$
-\left( \begin{array}{c} 0 \\ 1 \\ \end{array} \right)
-$$ 
-to get the product $$A\alpha$$.\\
-In terms of vectors, one can interpret the columns of matrix as vector directions of $$\hat i$$ & $$\hat j$$ and the multiplication $$A\alpha$$ is nothing but the vector $$ \alpha_1 \hat i + \alpha_2 \hat j $$.
-
-Cool! but what if the matrix isn't trivial like this one? say 
-$$A = \left( \begin{array}{cc} x_1 & x_2 \\ y_1 & y_2 \\ \end{array} \right)$$
-this makes a very little difference. Instead of the component directions being $$\hat i$$ & $$\hat j$$, the direction of each column will be $$ (x_1 \hat i + y_1 \hat j) $$ & $$ (x_2 \hat i + y_2 \hat j) $$ respectively.
-And the product $$ A \alpha $$ is nothing but  $$ \alpha_1 (x_1 \hat i + y_1 \hat j)  + \alpha_2 (x_2 \hat i + y_2 \hat j)$$! This is really a nice way to look at matrix multiplications which relate Matrices to Vectors in such an intuitive way!
-
-Now, where is transformation in all this? For this we need to look at $$\alpha$$. \\
-Any $$\alpha$$ with dimension $$(2 \times 1)$$ can represent a point in 2-dimension.  So, $$\alpha \in \mathcal{R}^2$$ and after multiplying by $$A$$, the product $$A\alpha \in \mathcal{R}^2$$ too. So, we can say that $$A$$ maps a vector from $$\mathcal{R}^2$$ to $$\mathcal{R}^2$$, **but is it the same Coordinate System?** The answer is **No!** the coordinate system has changed indeed but how? Think of it this way - originally, $$\alpha$$ was in original $$2D$$ plane whose axis were 
-$$
-\left( \begin{array}{c} 1 \\ 0 \\ \end{array} \right)
-$$ 
-&
-$$
-\left( \begin{array}{c} 0 \\ 1 \\ \end{array} \right)
-$$ 
-(or $$\hat i$$ & $$\hat j$$), so to go to any point we need to go some distance along $$\hat i$$ and some distance along $$\hat j$$, but after multiplying it by $$A$$, the axis are changed to 
-$$
-\left( \begin{array}{c} x_1 \\ y_1 \\ \end{array} \right)
-$$ 
-&
-$$
-\left( \begin{array}{c} x_2 \\ y_2 \\ \end{array} \right)
-$$ 
-(or $$(x_1 \hat i + y_1 \hat j)$$ & $$(x_2 \hat i + y_2 \hat j)$$). So, can you see the transformation? The axis of the coordinate system is changed after multiplying with a matrix. More clearly-
+Yup, that’s the classic row-by-column drill. But here’s a cooler perspective:
 
 $$
-\left( \begin{array}{c} 1 \\ 0 \\ \end{array} \right) \rightarrow \left( \begin{array}{c} x_1 \\ y_1 \\ \end{array} \right)
+A\alpha = \alpha_1 \begin{pmatrix} 1 \\ 0 \end{pmatrix} + \alpha_2 \begin{pmatrix} 0 \\ 1 \end{pmatrix}
 $$
-&nbsp;&nbsp; & &nbsp;&nbsp;
+
+Whoa! What’s happening here? The columns of \(A\) — $$ \left(\begin{array}{c} 1 \\ 0 \end{array}\right) $$ and $$ \left(\begin{array}{c} 0 \\ 1 \end{array}\right) $$—are being **scaled** by $$ \alpha_1 $$ and $$ \alpha_2 $$, then added together. Recognize those columns? They’re the standard basis vectors $$\hat{i}$$ and $$\hat{j}$$ in 2D space! So, $$A\alpha = \alpha_1 \hat{i} + \alpha_2 \hat{j}$$, which is just $$\alpha$$. No transformation here, just a round-trip back to itself.
+
+Now, let’s spice things up with a wilder matrix:
+
 $$
-\left( \begin{array}{c} 0 \\ 1 \\ \end{array} \right) \rightarrow \left( \begin{array}{c} x_2 \\ y_2 \\ \end{array} \right)
-$$ \\
-In literature this axis is also called **Basis Vector**. Basis of a Matrix is a set of vector through which we can get any point (in that dimension) by taking some linear combination of these vectors. There's more to this, but I leave it to the reader to explore for themselves.
+A = \begin{pmatrix} x_1 & x_2 \\ y_1 & y_2 \end{pmatrix}
+$$
 
-## What are these "Eigen" things?
+Same deal—multiply it by $$\alpha$$:
 
-Having an intuition of how matrix can be seen as a Transformation, we are in a position to understand the Eigenvectors & Eigenvalues.
+$$
+A\alpha = \alpha_1 \begin{pmatrix} x_1 \\ y_1 \end{pmatrix} + \alpha_2 \begin{pmatrix} x_2 \\ y_2 \end{pmatrix}
+$$
 
-So, while transforming a point from one basis to another by multiplication of a matrix, we map a point original 2D plane to some other point in the transformed plane. If we look at the vectors representing these points, they are also being transformed from one coordinate system to another. However, **there are some vectors that don't change their direction, instead they only get scaled up or scaled down!** These vectors are nothing but the Eigenvectors! and the amount by which they get scaled up or down is the corresponding Eigenvalue!
+Here, the columns $$\begin{pmatrix} x_1 \\ y_1 \end{pmatrix}$$ and $$\begin{pmatrix} x_2 \\ y_2 \end{pmatrix}$$ are the new “directions” (or basis vectors). The result? A vector built by scaling these columns and summing them up. In vector-speak, that’s $$\alpha_1 (x_1 \hat{i} + y_1 \hat{j}) + \alpha_2 (x_2 \hat{i} + y_2 \hat{j})$$. Neat, right?
 
-Mathematically, these are the vectors that after multiplying by $$A$$ get scaled up or down but the direction remains the same. For equation form we need, $$Ax$$ which is in the same direction as $$x$$ but scaled up or down (let's say by $$\lambda$$). So,
+So, what’s the transformation? Picture $$\alpha$$ as a point in 2D space, originally lounging in a coordinate system with axes $$\hat{i}$$ and $$\hat{j}$$. Multiply by $$A$$, and bam—it’s now expressed relative to a new set of basis vectors $$\begin{pmatrix} x_1 \\ y_1 \end{pmatrix}$$ and $$\begin{pmatrix} x_2 \\ y_2 \end{pmatrix}$$—assuming those columns are linearly independent. The matrix **defines a linear transformation** that can often be visualized as mapping vectors relative to this new basis. But here’s a heads-up: not every matrix simply “changes the coordinate system”—some squash space into lower dimensions or stretch it in funky ways. We’ll see more of that soon!
+
+## What’s the Deal with These “Eigen” Things?
+
+With matrices twisting space like a sci-fi plot, let’s meet the stars: eigenvectors and eigenvalues.
+
+When a matrix transforms a vector, it usually stretches, squashes, or spins it every which way. But there are **special vectors** that stay chill—they don’t change direction, only their size. These are **eigenvectors**, and the scaling factor? That’s the **eigenvalue**.
+
+In math terms, for a matrix $$A$$ and vector $$x$$, if:
 
 $$
 Ax = \lambda x
 $$
 
-Which is the equation we have been taught since childhood to calculate the eigenvectors & eigenvalues. From this equation, we can find the Eigenvalues of A by solving 
+where $$\lambda$$ is a scalar, then $$x$$ is an eigenvector, and $$\lambda$$ is its eigenvalue. The vector $$x$$ gets stretched or shrunk by $$\lambda$$, but its direction? Untouched.
+
+To hunt these down, we solve:
 
 $$
-|A - \lambda\mathbb{I}| = 0
+\det(A - \lambda I) = 0
 $$
 
-, to find the eigenvectors, we will have to find the Basis of Null-Space of
-$$
-A - \lambda\mathbb{I}
-$$
-. Null Space of a matrix $$A$$ (also written as $$N(A)$$) contains all the vectors $$x$$ such that, $$Ax=0$$, so finding basis of 
-$$ N(A-\lambda\mathbb{I}) $$ 
-means that we have to find basis of all the vectors for which $$ (A - \lambda\mathbb{I})x = 0 $$ which is the definition of Eigenvectors.
+This gives us the eigenvalues $$\lambda$$. Then, for each $$\lambda$$, we find the eigenvectors by solving $$(A - \lambda I)x = 0$$, which defines the **null space**—all vectors that $$A - \lambda I$$ maps to zero. Those are our eigenvectors!
 
-## Some things to look for
+## Watch Out for These Gems: Span and Rank
 
-Okay! so upto this point we have understood what is the physical significance of Eigenvectors. Now there are somethings, we should be aware of. Let's first define some terms.
+Let’s level up with two key ideas: **span** and **rank**.
 
-**Span**: The **span** of a set of vectors is the set of all Linear Combinations of the vectors. Implicitly, Span indicates the dimension that can be covered by using a set of vectors.
+- **Span**: The set of all possible linear combinations of a matrix’s columns. It’s the “space” they cover.
+- **Rank**: The number of linearly independent columns in a matrix. It tells us the dimension of the transformed space.
 
-**Rank**: Rank of a matrix is defined as the maximum number of linearly independent columns in a matrix. This is the textbook defiition of Rank. It's physical significance is that, Rank of a matrix denotes the dimension of the transformed coordinate system. To understand this, let's take an example 
-$$A = \left( \begin{array}{ccc} 1 & 2 & 5 \\ 3 & 5 & 13 \\ 7 & 6 & 19 \\ \end{array} \right)$$
-
-So, if a vector of dimension $$(3 \times 1)$$ is multiplied by A, we'll get a $$(3 \times 1)$$ vector. Seems nice! It looks like $$A$$ produces a vector in 3D. But, it's not the case! if we look carefully, then we can see that, there are only 2 independent column in $$A$$!
+Check out this matrix:
 
 $$
-C_3 = C_1 + 2C_2
-$$ 
-
-where $$C_1, C_2$$ & $$C_3$$ are the columns of $$A$$ \\
-So, what this means is, these 3 columns/vectors are **Coplanar**, so taking any linear combination of these vectors would give us a point in this plane itself! So, the Span of the matrix is $$\mathcal{R}^2$$ and not $$\mathcal{R}^3$$! We can also see this by a simple calculation, take any linear combination of columns of $$A$$-
-
-$$
-C = \alpha_1 C_1 + \alpha_2 C_2 + \alpha_3 C_3
+A = \begin{pmatrix} 1 & 2 & 5 \\ 3 & 5 & 13 \\ 7 & 6 & 19 \end{pmatrix}
 $$
 
-Using $$(5)$$
+Looks like it takes a 3D vector ($$\mathbb{R}^3$$) and spits out another 3D vector, right? Not so fast! Peek at the columns:
+
+- $$\begin{pmatrix} 5 \\ 13 \\ 19 \end{pmatrix} = 1 \cdot \begin{pmatrix} 1 \\ 3 \\ 7 \end{pmatrix} + 2 \cdot \begin{pmatrix} 2 \\ 5 \\ 6 \end{pmatrix}$$
+
+The third column is just a mix of the first two—it’s **dependent**. So, these three vectors are coplanar, spanning only a 2D plane in 3D space. The rank? 2, not 3. When $$A$$ transforms a vector, it **squashes** $$\mathbb{R}^3$$ onto that 2D plane.
+
+What’s this got to do with eigenvectors? Here’s where it gets interesting—and a bit tricky. You might think the number of non-zero eigenvectors equals the rank, but let’s clarify: **for diagonalizable matrices**, the number of linearly independent eigenvectors corresponding to non-zero eigenvalues equals the rank. In this example, with rank 2, we’d expect two such eigenvectors if $$A$$ is diagonalizable, spanning that 2D plane. The third dimension? It’s crushed, linked to an eigenvalue of zero. But caution: not all matrices are diagonalizable (think defective matrices with repeated eigenvalues but fewer eigenvectors)—in those cases, the eigenvector count might not match up so neatly. For now, let’s assume our matrix plays nice and is diagonalizable.
+
+## Why Do They Pop Up Everywhere?
+
+Eigenvectors and eigenvalues are the secret sauce of linear transformations. They let us break down a matrix into stretching or squashing along specific directions—way easier to wrap your head around!
+
+Enter **eigenvalue decomposition**:
 
 $$
-C = \alpha_1 C_1 + \alpha_2 C_2 + \alpha3 (C_1 + 2C_2) \\
-= (\alpha_1 + \alpha_3) C_1 + (\alpha_2 + 2 \alpha_3) C_2 \\
-C = \beta_1 C_1 + \beta_2 C_2
+A = V \Lambda V^{-1}
 $$
 
-So, though it looks like $$A$$ maps a vector to $$\mathcal{R}^3$$ but, it actually maps it to $$\mathcal{R}^2$$. Hence, rank of the matrix is 2! 
+Here, $$V$$ is packed with eigenvectors as columns, and $$\Lambda$$ is a diagonal matrix of eigenvalues. This trick simplifies everything—think powers of $$A$$, system dynamics in control theory, or signal modes in processing. It’s a game-changer! (Note: This only works for diagonalizable matrices—another reason that distinction matters.)
 
-That being said, let's try to visualize the transformation this matrix is performing. So, we know that the input space is $$\mathcal{R}^3$$ and the output space is $$\mathcal{R}^2$$, this means that, the transformation in some way, squashes the entire 3D system into 2D system!\\
-So, what does it have to do with eigenvectors & eigenvalues?  Well the number of non-zero Eigenvectors will be equal to Rank of the matrix. This is quite intuitive, because a 2D plane can only have a maximum of 2 Eigenvectors (any 3rd vector can be represented as sum of these 2), and the 3rd Eigenvector would come from the sqashing of the 3D space for which the Eigenvalue will be 0! \\
-So, thing to take away is the number of non-zero Eigenvectors will be equal to the Rank of the Matrix.
+## Wrapping It Up
 
-**Note**: This discussion is valid for any $$n$$-dimensional matrix.
+Eigenvectors and eigenvalues turn the abstract world of matrices into something tangible—directions that hold steady under transformation, scaled by neat little numbers. We’ve clarified that matrices define transformations (not just coordinate swaps), and the eigenvector-rank connection holds for diagonalizable cases. Hopefully, this journey has shed some light on their magic—and their quirks!
 
-## So why do they pop up everywhere?
+Want more? Check these out:
 
-Well simply put, Eigenvectors make understanding/visualizing Linear transforms easier! We can analyse any Linear transform as stretching or compressing of a vector. Which makes things much easier, we can always decompose a matrix in terms of it's eigenvectors & eigenvalues.
+1. [3Blue1Brown’s Eigenvectors Video](https://www.youtube.com/watch?v=PFDu9oVAE-g) - Stunning visuals!
+2. [Setosa.io’s Interactive Eigen Exploration](https://setosa.io/ev/eigenvectors-and-eigenvalues/) - Play around with it!
+3. [Gilbert Strang’s Lecture](https://www.youtube.com/watch?v=DzqE7tj7eIM) - Deep theory from a legend.
 
-$$
-A = V^{-1} \Lambda V
-$$
-
-where $$V$$ is the matrix containing Eigenvectors & $$\Lambda$$ is a Diagonal matrix with Eigenvalues as the diagonal values. This Factorisation is also called **Eigenvalue decomposition**, which is heavily used in Control Theory & Signal Processing.
-
-Well that's it! Hope I have explained the concepts clearly. Any feedback will be highly valued.
-
-## Footnotes
-
-1. [3Blue 1Brown's video on Eigenvectors & Eigenvalues](https://www.youtube.com/watch?v=PFDu9oVAE-g) is a really nice video! The animations were really helpful for me while understanding these concepts.
-
-2. [Setosa.io's blog on Eigenvectors & Eigenvalues](https://setosa.io/ev/eigenvectors-and-eigenvalues/) are also nice tool to visualize the same.
-
-3. [Gilbert Strang's lecture on Eigenvectors & Eigenvalues](https://www.youtube.com/watch?v=DzqE7tj7eIM) give a very theorotical insight into Eigenvectors.
+Thanks for reading! Got thoughts? Drop some feedback—I’d love to hear it!
